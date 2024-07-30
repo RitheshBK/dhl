@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_help().
+ */
+function dhl_location_finder_help(string $route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.dhl_location_finder':
+      return '<p>' . t('The DHL Location Finder module allows users to find DHL locations by entering country, city, and postal code. Locations that do not work on weekends or have an odd number in their address are filtered out.') . '</p>';
+  }
+}
